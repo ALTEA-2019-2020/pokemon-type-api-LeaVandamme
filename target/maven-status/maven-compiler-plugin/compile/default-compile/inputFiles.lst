@@ -1,0 +1,13 @@
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/Application.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/bo/Stats.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/bo/PokemonType.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/repository/PokemonRepositoryImplTest.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/repository/PokemonTypeRepositoryImpl.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/controller/PokemonTypeControllerIntegrationTest.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/controller/PokemonTypeController.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/service/PokemonTypeServiceImpl.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/service/PokemonTypeServiceImplTest.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/controller/PokemonTypeControllerTest.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/service/PokemonTypeService.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/bo/Sprites.java
+/home/lea/Documents/M2/ALTEA/pokemon-type-api-LeaVandamme/src/main/java/com/miage/altea/tp/pokemon_type_api/repository/PokemonTypeRepository.java

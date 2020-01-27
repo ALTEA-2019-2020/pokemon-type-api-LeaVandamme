@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.miage.altea.tp.pokemon_type_api.bo.PokemonType;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -17,7 +18,8 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository{
 
     public PokemonTypeRepositoryImpl() {
         try {
-            var pokemonsStream = this.getClass().getResourceAsStream("/pokemons.json");
+            var pokemonsStream = new ClassPathResource("pokemons.json").getInputStream();
+
             var objectMapper = new ObjectMapper();
             var pokemonsArray = objectMapper.readValue(pokemonsStream, PokemonType[].class);
             this.pokemons = Arrays.asList(pokemonsArray);
