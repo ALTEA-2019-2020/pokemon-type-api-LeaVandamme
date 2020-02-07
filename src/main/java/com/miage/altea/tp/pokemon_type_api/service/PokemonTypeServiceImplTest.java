@@ -3,6 +3,10 @@ package com.miage.altea.tp.pokemon_type_api.service;
 import com.miage.altea.tp.pokemon_type_api.repository.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import static org.mockito.Mockito.mock;
@@ -28,6 +32,28 @@ class PokemonTypeServiceImplTest {
         pokemonTypeService.getAllPokemonTypes();
 
         verify(pokemonTypeRepository).findAllPokemonType();
+    }
+
+    @Test
+    void pokemonTypeRepository_shouldBeCalled_whenFindByName(){
+        var pokemonTypeRepository = mock(PokemonTypeRepository.class);
+        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository);
+
+        pokemonTypeService.getPokemonTypeByName("pikachu");
+
+        verify(pokemonTypeRepository).findPokemonTypeByName("pikachu");
+    }
+
+    @Test
+    void pokemonTypeRepository_shouldBeCalled_whenFindByType(){
+        var pokemonTypeRepository = mock(PokemonTypeRepository.class);
+        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository);
+        List<String> types = new ArrayList<String>();
+        types.add("electric");
+
+        pokemonTypeService.getPokemonTypeByTypes(types);
+
+        verify(pokemonTypeRepository).findPokemonTypeByTypes(types);
     }
 
     @Test

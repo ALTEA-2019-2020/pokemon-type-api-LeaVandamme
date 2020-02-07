@@ -3,6 +3,9 @@ package com.miage.altea.tp.pokemon_type_api.repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PokemonTypeRepositoryImplTest {
@@ -46,6 +49,16 @@ class PokemonTypeRepositoryImplTest {
         var pokemons = repository.findAllPokemonType();
         assertNotNull(pokemons);
         assertEquals(151, pokemons.size());
+    }
+
+    @Test
+    void findPokemonTypeByTypes_withElectric_shouldReturnAllElectrics(){
+        List<String> types = new ArrayList<String>();
+        types.add("electric");
+        var electrics = repository.findPokemonTypeByTypes(types);
+        System.out.println(electrics);
+        assertNotNull(electrics);
+        assertTrue(electrics.contains(repository.findPokemonTypeByName("pikachu")));
     }
 
     @Test

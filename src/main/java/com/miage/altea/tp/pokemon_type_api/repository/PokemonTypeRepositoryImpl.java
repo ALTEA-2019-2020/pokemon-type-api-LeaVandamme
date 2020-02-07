@@ -53,6 +53,24 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository{
     }
 
     @Override
+    public List<PokemonType> findPokemonTypeByTypes(List<String> types) {
+        System.out.println("Loading Pokemon information for Pokemon types");
+        List<PokemonType> pokeTypes = new ArrayList<>();
+
+        for(PokemonType pt : pokemons){
+            boolean tmp = true;
+            for(String t : types)
+                if(!pt.getTypes().contains(t)){
+                    tmp = false;
+                }
+            if(tmp){
+                pokeTypes.add(pt);
+            }
+        }
+        return pokeTypes;
+    }
+
+    @Override
     public List<PokemonType> findAllPokemonType() {
         List<PokemonType> res = new ArrayList<PokemonType>() ;
         for(PokemonType pt : pokemons){
