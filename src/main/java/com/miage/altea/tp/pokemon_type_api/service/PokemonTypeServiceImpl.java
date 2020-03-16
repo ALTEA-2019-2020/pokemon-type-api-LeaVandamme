@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -46,6 +47,7 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
     @Override
     public List<PokemonType> getAllPokemonTypes(){
         List<PokemonType> list = this.pokemonTypeRepository.findAllPokemonType();
+        Collections.sort(list);
         for(PokemonType pok : list){
             String name = translationRepository.getPokemonName(pok.getId(), LocaleContextHolder.getLocale());
             pok.setName(name);

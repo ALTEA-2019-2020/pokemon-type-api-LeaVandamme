@@ -1,7 +1,9 @@
-package com.miage.altea.tp.pokemon_type_api.service;
+package service;
 
 import com.miage.altea.tp.pokemon_type_api.bo.PokemonType;
 import com.miage.altea.tp.pokemon_type_api.repository.*;
+import com.miage.altea.tp.pokemon_type_api.service.PokemonTypeService;
+import com.miage.altea.tp.pokemon_type_api.service.PokemonTypeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.i18n.LocaleContextHolder;

@@ -1,6 +1,7 @@
-package com.miage.altea.tp.pokemon_type_api.controller;
+package controller;
 
 import com.miage.altea.tp.pokemon_type_api.bo.PokemonType;
+import com.miage.altea.tp.pokemon_type_api.controller.PokemonTypeController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

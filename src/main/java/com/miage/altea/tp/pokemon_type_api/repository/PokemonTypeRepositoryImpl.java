@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Repository
@@ -76,6 +77,7 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository{
         for(PokemonType pt : pokemons){
             res.add(pt);
         }
+        Collections.sort(res);
         return res;
     }
 }
