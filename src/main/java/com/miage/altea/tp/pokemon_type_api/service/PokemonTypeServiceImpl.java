@@ -47,7 +47,6 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
     @Override
     public List<PokemonType> getAllPokemonTypes(){
         List<PokemonType> list = this.pokemonTypeRepository.findAllPokemonType();
-        Collections.sort(list);
         for(PokemonType pok : list){
             String name = translationRepository.getPokemonName(pok.getId(), LocaleContextHolder.getLocale());
             pok.setName(name);
