@@ -90,7 +90,13 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/pokemon-types/",
 					"protocol": "http",
