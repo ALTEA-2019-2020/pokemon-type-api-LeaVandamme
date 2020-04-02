@@ -29,8 +29,8 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository{
     @Override
     public PokemonType findPokemonTypeById(int id) {
         System.out.println("Loading Pokemon information for Pokemon id " + id);
-
         for(PokemonType pt : pokemons){
+
             if(pt.getId() == id){
                 return pt;
             }

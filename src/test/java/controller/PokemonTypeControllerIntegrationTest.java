@@ -16,7 +16,7 @@ import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = PokemonTypeController.class , webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PokemonTypeControllerIntegrationTest {
 
     @LocalServerPort

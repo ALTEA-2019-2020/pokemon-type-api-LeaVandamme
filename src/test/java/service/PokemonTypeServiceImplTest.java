@@ -23,24 +23,29 @@ class PokemonTypeServiceImplTest {
 
     /*@Test
     void pokemonTypeRepository_shouldBeCalled_whenFindById(){
-        var pokemonTypeRepository = mock(PokemonTypeRepository.class);
 
-        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository);
+        PokemonTypeRepository pokemonTypeRepository = mock(PokemonTypeRepository.class);
+        TranslationRepository translationRepository = mock(TranslationRepository.class);
+
+        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository, translationRepository);
+        pokemonTypeService.setPokemonTypeRepository(pokemonTypeRepository);
 
         pokemonTypeService.getPokemonType(25);
 
         verify(pokemonTypeRepository).findPokemonTypeById(25);
-    }
+    }*/
 
     @Test
     void pokemonTypeRepository_shouldBeCalled_whenFindAll(){
         var pokemonTypeRepository = mock(PokemonTypeRepository.class);
-        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository);
+        var translationRepository = mock(TranslationRepository.class);
+
+        var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository, translationRepository);
 
         pokemonTypeService.getAllPokemonTypes();
 
         verify(pokemonTypeRepository).findAllPokemonType();
-    }*/
+    }
 
     @Test
     void pokemonTypeRepository_shouldBeCalled_whenFindByName(){
