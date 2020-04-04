@@ -6,27 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/pokemon-types/25",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/pokemon-types/25",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"pokemon-types",
-						"25"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8080/pokemon-types/1",
+			"name": "get Pokemon by id",
 			"event": [
 				{
 					"listen": "test",
@@ -62,7 +42,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/pokemon-types",
+			"name": "all pokemons lang=en",
 			"event": [
 				{
 					"listen": "test",
@@ -113,7 +93,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/pokemon-types",
+			"name": "all Pokemons lang=fr",
 			"event": [
 				{
 					"listen": "test",
@@ -164,7 +144,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/pokemon-types/1",
+			"name": "pokemonType by id lang=fr",
 			"event": [
 				{
 					"listen": "test",
@@ -200,6 +180,89 @@
 					"path": [
 						"pokemon-types",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Pokemon by name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5c92ce3-9412-4b3c-8a44-4a53f5936451",
+						"exec": [
+							"pm.test(\"Pikachu\", function () {",
+							"    var bulbasaur = pm.response.json();",
+							"    pm.expect(bulbasaur.id).to.eq(25);",
+							"    pm.expect(bulbasaur.name).to.eq(\"pikachu\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types/?name=pikachu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "pikachu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Pokemons by type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ee35fc4-8e52-47a1-bd1a-cb072c809f35",
+						"exec": [
+							"pm.test(\"all pokemons of type electric\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eq(9);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types/?types=electric",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types",
+						""
+					],
+					"query": [
+						{
+							"key": "types",
+							"value": "electric"
+						}
 					]
 				}
 			},
