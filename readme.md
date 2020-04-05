@@ -1,6 +1,7 @@
 ## PokemonType - API
 
-Port utilisé  : 8080
+Port utilisé  : 8080  
+Version Java : 13
 
 #### Pour tester
 
