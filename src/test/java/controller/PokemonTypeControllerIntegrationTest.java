@@ -1,5 +1,6 @@
 package controller;
 
+import com.miage.altea.tp.pokemon_type_api.Application;
 import com.miage.altea.tp.pokemon_type_api.bo.PokemonType;
 import com.miage.altea.tp.pokemon_type_api.controller.PokemonTypeController;
 import org.junit.jupiter.api.Test;
@@ -10,13 +11,15 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(classes = PokemonTypeController.class , webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ContextConfiguration(classes = Application.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PokemonTypeControllerIntegrationTest {
 
     @LocalServerPort
